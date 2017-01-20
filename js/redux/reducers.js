@@ -1,19 +1,19 @@
-import { SET_SEARCH_TERM } from './actions'
+import { SET_CART_ITEM } from './actions'
 
 const DEFAULT_STATE = {
-  searchTerm: ''
+  cartItem: ''
 }
 
-const setSearchTerm = (state, action) => {
+const setCartItem = (state, action) => {
   const newState = {}
-  Object.assign(newState, state, {searchTerm: action.searchTerm})
+  Object.assign(newState, state, {cartItem: action.cartItem})
   return newState
 }
 
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
-    case SET_SEARCH_TERM:
-      return setSearchTerm(state, action)
+    case SET_CART_ITEM:
+      return setCartItem(state, action)
     default:
       return state
   }

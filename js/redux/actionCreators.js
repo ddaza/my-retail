@@ -1,5 +1,5 @@
-import { SET_SEARCH_TERM } from './actions'
+import { SET_CART_ITEM } from './actions'
 
-export function setSearchTerm (searchTerm) {
-  return { type: SET_SEARCH_TERM, searchTerm }
+export function setCartItem (cartItem) {
+  return { type: SET_CART_ITEM, cartItem }
 }

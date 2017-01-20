@@ -27,6 +27,7 @@
     "react-router": "4.0.0-alpha.5",
     "redux": "3.3.1",
     "redux-thunk": "^2.1.0",
+    "sanitize-html": "^1.14.1",
     "semantic-ui-react": "^0.64.2"
   },
   "devDependencies": {
