@@ -17,7 +17,7 @@ module.exports = {
     }
   },
   resolve: {
-    extensions: ['.js', '.json', '.scss']
+    extensions: ['.js', '.json']
   },
   stats: {
     colors: true,
