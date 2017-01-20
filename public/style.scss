@@ -3,16 +3,3 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  height: 100vh;
-
-  &.locked {
-    overflow: hidden;
-  }
-}
-
-.app {
-  height: 100vh;
-  overflow: hidden;
-}

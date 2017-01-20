@@ -9,6 +9,7 @@ import ItemDetails from './ItemDetails.react'
 import catalog from '../public/item-data.json'
 import '../public/semantic.min.css'
 import '../public/normalize.css'
+import '../public/style.scss'
 
 const App = React.createClass({
   render () {

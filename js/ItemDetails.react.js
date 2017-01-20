@@ -1,21 +1,23 @@
 import React from 'react'
 import sanitize from 'sanitize-html'
-import { Container, Grid, Header, Image } from 'semantic-ui-react'
+import ItemDetailsReviews from './ItemDetailsReviews.react'
+import { Grid, Header, Image } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 const { object, func } = React.PropTypes
 
 class ItemDetails extends React.Component {
   render () {
-    const storeItem = this.props.storeItem
+    const storeItem = this.props.storeItem || {}
     return (
-        <Grid stackable relaxed>
-          <Grid.Column width={7} >
-            <Header as='h3'>
+      <div>
+        <Grid stackable relaxed columns={2}>
+          <Grid.Column>
+            <Header as='h3' textAlign='center'>
               { storeItem.title }
             </Header>
             <Image src={storeItem.Images[0].PrimaryImage[0].image} />
           </Grid.Column>
-          <Grid.Column width={7}>
+          <Grid.Column>
             <Header as='h2'>
               {storeItem.Offers[0].OfferPrice[0].formattedPriceValue}
             </Header>
@@ -37,6 +39,10 @@ class ItemDetails extends React.Component {
             </ul>
           </Grid.Column>
         </Grid>
+        <ItemDetailsReviews
+          customerReview={storeItem.CustomerReview[0]}
+        />
+      </div>
     )
   }
 }
