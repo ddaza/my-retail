@@ -2,11 +2,13 @@ import React from 'react'
 import sanitize from 'sanitize-html'
 import ItemDetailsReviews from './ItemDetailsReviews.react'
 import ImageCarousel from './ImageCarousel.react'
+import PurchaseButtons from './PurchaseButtons.react'
 import { Grid, Header } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 const { object, func } = React.PropTypes
 
 class ItemDetails extends React.Component {
+
   render () {
     const storeItem = this.props.storeItem || {}
     return (
@@ -22,6 +24,9 @@ class ItemDetails extends React.Component {
             <Header as='h2'>
               {storeItem.Offers[0].OfferPrice[0].formattedPriceValue}
             </Header>
+            <PurchaseButtons
+              channelCode={storeItem.purchasingChannelCode}
+            />
             <Header as='h2'>
               product highlights
             </Header>

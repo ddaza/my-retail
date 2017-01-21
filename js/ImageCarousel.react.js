@@ -6,7 +6,7 @@ const { string, func, arrayOf, object } = React.PropTypes
 
 class ImageCarousel extends React.Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.getImageArray = this.getImageArray.bind(this)
   }
