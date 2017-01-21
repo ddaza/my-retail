@@ -1,7 +1,8 @@
 import React from 'react'
 import sanitize from 'sanitize-html'
 import ItemDetailsReviews from './ItemDetailsReviews.react'
-import { Grid, Header, Image } from 'semantic-ui-react'
+import ImageCarousel from './ImageCarousel.react'
+import { Grid, Header } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 const { object, func } = React.PropTypes
 
@@ -15,7 +16,7 @@ class ItemDetails extends React.Component {
             <Header as='h3' textAlign='center'>
               { storeItem.title }
             </Header>
-            <Image src={storeItem.Images[0].PrimaryImage[0].image} />
+            <ImageCarousel images={storeItem.Images} />
           </Grid.Column>
           <Grid.Column>
             <Header as='h2'>
