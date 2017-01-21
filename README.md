@@ -1,13 +1,39 @@
-# A Complete Intro to React
+# myRetail Reactive Store Front
 
-Welcome to a complete intro to React! The site actual workshop material for this repo can be found [here][gh-page]. On the master branch you will find the completed project. On the start branch you will find the barebones boilerplater of the project designed to help you get started.
+follow the instructions to run myRetail website:
 
-## Contributing
+* On the root folder you want to start by:
+  ```sh
+   $ yarn install
+  ```
+* Once it is __done__ you should run the server to start your App
+  ```sh
+   $ npm start
+  ```
+  this would start the app on `localhost:5050`
 
-Please contribute, file issues, and make PRs. More than anything I'm sure there are typos abounding.
+* If you want to start the __dev__ enviroment
+  ```sh
+   $ npm run dev
+  ```
+  This would start the __[webpack](https://webpack.github.io/)__ dev enviroment and you would be able to make changes to the code without restarting your server.
+
+* To run the tests, use this command
+
+  ```sh
+   $ npm run tests
+  ```
+
+### Continuous Integration
+
+There is a lot to do in this area. Since we use a node server we can deploy it into a container. Docker comes to mind.
+
+There can also be a lot more tests written. However since we are using [Redux](redux.js.org) it can be enough to tests the reducers that contains the business logic.
+
+Also we can add githooks for PRs and test the code at every step of the way.
+
+Lastly we added linters as part of the build process to make sure the code quality is uniform across enviroments.
 
 ## License
 
 MIT
-
-[gh-page]: http://btholt.github.io/complete-intro-to-react/
