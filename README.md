@@ -34,6 +34,14 @@ Also we can add githooks for PRs and test the code at every step of the way.
 
 Lastly we added linters as part of the build process to make sure the code quality is uniform across enviroments.
 
+  ```
+  +---------------------+        +-----------------+          +------------------+
+  |                     |  Tests |                 |  QA      |                  |
+  |  Dev Enviroment     +-------->    Staging      +---------->     Production   |
+  |                     | GitHook|                 | Smoke    |                  |
+  +---------------------+ Linter +-----------------+ Tests    +------------------+
+  ```
+
 ## License
 
 MIT
